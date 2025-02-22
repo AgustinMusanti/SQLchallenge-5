@@ -73,5 +73,23 @@ INNER JOIN productos p ON v.producto_id = p.producto_id
 WHERE c.cliente_pais = 'Argentina';
 
 
+## 6- JOIN anidado
+    
+SELECT 
+    categoria,
+    COUNT(*) AS total_vendidos
+    
+FROM (
+    SELECT 
+        p.categoria
+    
+    FROM ventas v
+    
+    INNER JOIN productos p ON v.producto_id = p.producto_id
+)   AS ventas_por_categoria
+    
+GROUP BY categoria;
+
+
 
 
