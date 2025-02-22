@@ -18,6 +18,19 @@ SELECT
     
 FROM clientes c
     
-LEFT JOIN ventas v ON c.cliente_id = v.cliente_id
+LEFT JOIN ventas v    ON c.cliente_id = v.cliente_id
 LEFT JOIN productos p ON v.producto_id = p.producto_id;
+
+
+## 3- RIGHT JOIN
+
+SELECT 
+    p.nombre_producto AS producto,
+    c.nombre_cliente  AS cliente
+    
+FROM ventas v
+    
+RIGHT JOIN productos p ON v.producto_id = p.producto_id
+LEFT JOIN clientes c   ON v.cliente_id = c.cliente_id;
+
 
