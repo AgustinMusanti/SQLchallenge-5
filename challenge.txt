@@ -1,0 +1,39 @@
+🎯 Consultas a resolver:
+
+1- INNER JOIN
+  
+Traé el nombre del cliente y el producto comprado, solo para las ventas realizadas.
+  
+💬 (Deberías obtener solo los registros donde hay coincidencia en ambas tablas)
+
+2- LEFT JOIN
+  
+Mostrá todos los clientes junto a los productos que compraron. Si un cliente no realizó compras, que aparezca igualmente con NULL en los datos del producto.
+
+💬 (Acá podés ver los clientes que aún no realizaron compras)
+
+3- RIGHT JOIN
+  
+Mostrá todos los productos, incluyendo aquellos que aún no fueron vendidos, junto a los clientes que los compraron.
+
+💬 (Ideal para ver el inventario que no se movió)
+
+4- FULL OUTER JOIN
+  
+Generá una consulta que muestre todos los clientes y productos, hayan o no participado en una venta.
+
+(MySQL no soporta FULL OUTER JOIN directamente, pero podés simularlo con UNION entre LEFT y RIGHT JOINs.)
+
+5- JOIN + FILTRO
+  
+Obtené las ventas realizadas únicamente por clientes de Argentina.
+  
+6- JOIN anidado
+  
+Mostrá la cantidad total de productos vendidos por categoría.
+
+📌 Bonus:
+
+¿Podrías explicar en qué casos usarías cada tipo de JOIN y cómo afecta el resultado?
+
+  
