@@ -34,3 +34,29 @@ RIGHT JOIN productos p ON v.producto_id = p.producto_id
 LEFT JOIN clientes c   ON v.cliente_id = c.cliente_id;
 
 
+## 4- FULL OUTER JOIN
+
+-- Como MYSQL no soporta directamente a FULL OUTER JOIN, lo simulo usando UNION entre un LEFT JOIN y otro
+    
+SELECT 
+    c.nombre_cliente  AS cliente,
+    p.nombre_producto AS producto
+    
+FROM clientes c
+    
+LEFT JOIN ventas v    ON c.cliente_id = v.cliente_id
+LEFT JOIN productos p ON v.producto_id = p.producto_id
+
+UNION
+
+SELECT 
+    c.nombre_cliente  AS cliente,
+    p.nombre_producto AS producto
+    
+FROM productos p
+    
+LEFT JOIN ventas v   ON p.producto_id = v.producto_id
+LEFT JOIN clientes c ON v.cliente_id = c.cliente_id;
+
+
+
