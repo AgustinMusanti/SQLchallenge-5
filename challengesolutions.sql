@@ -59,4 +59,19 @@ LEFT JOIN ventas v   ON p.producto_id = v.producto_id
 LEFT JOIN clientes c ON v.cliente_id = c.cliente_id;
 
 
+## 5- JOIN + FILTRO
+    
+SELECT 
+    c.nombre_cliente  AS cliente,
+    p.nombre_producto AS producto,
+    v.fecha_venta     AS fecha
+    
+FROM ventas v
+    
+INNER JOIN clientes c  ON v.cliente_id = c.cliente_id
+INNER JOIN productos p ON v.producto_id = p.producto_id
+WHERE c.cliente_pais = 'Argentina';
+
+
+
 
