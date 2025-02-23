@@ -18,6 +18,16 @@ El proyecto incluye scripts SQL para:
 ✅ Inserción de datos de prueba.  
 ✅ Consultas avanzadas con diferentes tipos de JOINs.
 
+
+---
+
+## 📂 Estructura del Proyecto
+```
+📦 SQLchallenge-5
+ ├── 📄 challenge.txt             # Descripción del desafío
+ ├── 📜 database.sql              # Base de datos e inserción de datos (DDL y DML)
+ ├── 📜 challengesolutions.sql    # Respuestas prácticas al deasfio
+```
 ---
 
 ## 🛠️ **Tecnologías Utilizadas**
@@ -27,11 +37,11 @@ El proyecto incluye scripts SQL para:
 
 ---
 
-## 💡 **Contribuciones**
-¿Tenés ideas para mejorar el desafío? ¡Podés contribuir!
+## 📢 Contribuciones
+Si tenes mejoras o sugerencias, ¡podes contribuir! Solo haz un **fork** del repositorio y envía un **pull request** con tus cambios.
 
-1️⃣ Hacé un fork del repositorio.  
-2️⃣ Creá una rama (`git checkout -b mejora-nueva`).  
-3️⃣ Realizá tus cambios y hacé commit (`git commit -m 'Mejora propuesta'`).  
-4️⃣ Enviá un pull request.
+
+## 📄 Licencia
+Este proyecto está bajo la licencia **MIT**.
+
 
