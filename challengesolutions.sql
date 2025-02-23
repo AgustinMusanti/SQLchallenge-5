@@ -117,62 +117,55 @@ Ejemplo: Mostrar todos los clientes, aunque no hayan comprado.
 Resultado: Los clientes sin compras aparecen con NULL en la columna del producto.
     
 
-🔜 3. RIGHT JOIN (o RIGHT OUTER JOIN)
+3. RIGHT JOIN (o RIGHT OUTER JOIN)
     
-🔍 ¿Cuándo usarlo?
+¿Cuándo usarlo?
 
-Cuando te interesan todos los registros de la tabla secundaria (derecha) y solo los coincidentes de la principal.
+Cuando interesan todos los registros de la tabla secundaria (derecha) y solo los coincidentes de la principal.
 Perfecto para monitorear productos sin vender o servicios sin uso.
-🎯 Ejemplo: Mostrar todos los productos, se hayan vendido o no.
+    
+Ejemplo: Mostrar todos los productos, se hayan vendido o no.
 
-sql
-Copiar
-Editar
-SELECT p.nombre_producto, c.nombre_cliente
-FROM ventas v
-RIGHT JOIN productos p ON v.producto_id = p.producto_id
-LEFT JOIN clientes c ON v.cliente_id = c.cliente_id;
-📝 Resultado: Los productos no vendidos se mostrarán con NULL en el campo cliente.
+Resultado: Los productos no vendidos se mostrarán con NULL en el campo cliente.
+    
 
-🔗 4. FULL OUTER JOIN (Simulado en MySQL con UNION)
-🔍 ¿Cuándo usarlo?
+4. FULL OUTER JOIN (Simulado en MySQL con UNION)
+    
+¿Cuándo usarlo?
 
-Cuando querés obtener todos los registros de ambas tablas, coincidan o no.
+Cuando se quiere obtener todos los registros de ambas tablas, coincidan o no.
 Muy útil para análisis completos que incluyan actividad y falta de actividad.
-🎯 Ejemplo: Mostrar todos los clientes y todos los productos, hayan participado o no en ventas.
+    
+Ejemplo: Mostrar todos los clientes y todos los productos, hayan participado o no en ventas.
 
-sql
-Copiar
-Editar
-SELECT c.nombre_cliente, p.nombre_producto
-FROM clientes c
-LEFT JOIN ventas v ON c.cliente_id = v.cliente_id
-LEFT JOIN productos p ON v.producto_id = p.producto_id
-
-UNION
-
-SELECT c.nombre_cliente, p.nombre_producto
-FROM productos p
-LEFT JOIN ventas v ON p.producto_id = v.producto_id
-LEFT JOIN clientes c ON v.cliente_id = c.cliente_id;
-📝 Resultado:
+Resultado:
 
 Clientes sin compras ➡ NULL en producto.
 Productos sin ventas ➡ NULL en cliente.
-🏗 5. CROSS JOIN
-🔍 ¿Cuándo usarlo?
 
-Cuando necesitás todas las combinaciones posibles entre los registros de dos tablas.
+    
+5. CROSS JOIN
+    
+¿Cuándo usarlo?
+
+Cuando se necesitan todas las combinaciones posibles entre los registros de dos tablas.
 Se usa en escenarios como creación de escenarios hipotéticos o testing.
-🎯 Ejemplo: Combinar todos los clientes con todos los productos.
+    
+Ejemplo: Combinar todos los clientes con todos los productos.
 
-sql
-Copiar
-Editar
-SELECT c.nombre_cliente, p.nombre_producto
-FROM clientes c
-CROSS JOIN productos p;
-📝 Resultado: Cada cliente aparece combinado con todos los productos, generando un producto cartesiano.
+Resultado: Cada cliente aparece combinado con todos los productos, generando un producto cartesiano.
 
+
+## Resumen final
+
+INNER JOIN: Lo que coincide en ambas tablas
+    
+LEFT JOIN: Todos los registros de la tabla izquierda + coincidencias
+    
+RIGHT JOIN: Todos los registros de la tabla derecha + coincidencias
+    
+FULL OUTER JOIN: Todo de ambas tablas, coincida o no
+    
+CROSS JOIN: Todas las combinaciones posibles
 
 
