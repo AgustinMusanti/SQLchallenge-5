@@ -1,3 +1,5 @@
+-- Base de datos ficticia con el fin de practicar
+
 CREATE DATABASE IF NOT EXISTS blue_patagon_joins;
 USE blue_patagon_joins;
 
@@ -25,6 +27,8 @@ CREATE TABLE ventas (
     FOREIGN KEY (producto_id) REFERENCES productos(producto_id)
 );
 
+
+-- Insercion de datos con el fin de poder llevar a cabo el desafio
 
 INSERT INTO clientes (cliente_id, nombre_cliente, cliente_pais) 
 VALUES
