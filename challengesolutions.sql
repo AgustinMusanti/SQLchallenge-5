@@ -109,8 +109,8 @@ Resultado: Solo se veran a los clientes que compraron algo. Los que no realizaro
     
 ¿Cuándo usarlo?
 
-Cuando se quieren todos los registros de la tabla principal (izquierda), aunque no tengan coincidencia en la tabla relacionada.
-Útil para detectar datos faltantes o inactividad.
+*Cuando se quieren todos los registros de la tabla principal (izquierda), aunque no tengan coincidencia en la tabla relacionada.
+*Útil para detectar datos faltantes o inactividad.
     
 Ejemplo: Mostrar todos los clientes, aunque no hayan comprado.
 
@@ -121,8 +121,8 @@ Resultado: Los clientes sin compras aparecen con NULL en la columna del producto
     
 ¿Cuándo usarlo?
 
-Cuando interesan todos los registros de la tabla secundaria (derecha) y solo los coincidentes de la principal.
-Perfecto para monitorear productos sin vender o servicios sin uso.
+*Cuando interesan todos los registros de la tabla secundaria (derecha) y solo los coincidentes de la principal.
+*Perfecto para monitorear productos sin vender o servicios sin uso.
     
 Ejemplo: Mostrar todos los productos, se hayan vendido o no.
 
@@ -133,8 +133,8 @@ Resultado: Los productos no vendidos se mostrarán con NULL en el campo cliente.
     
 ¿Cuándo usarlo?
 
-Cuando se quiere obtener todos los registros de ambas tablas, coincidan o no.
-Muy útil para análisis completos que incluyan actividad y falta de actividad.
+*Cuando se quiere obtener todos los registros de ambas tablas, coincidan o no.
+*Muy útil para análisis completos que incluyan actividad y falta de actividad.
     
 Ejemplo: Mostrar todos los clientes y todos los productos, hayan participado o no en ventas.
 
@@ -148,8 +148,8 @@ Productos sin ventas ➡ NULL en cliente.
     
 ¿Cuándo usarlo?
 
-Cuando se necesitan todas las combinaciones posibles entre los registros de dos tablas.
-Se usa en escenarios como creación de escenarios hipotéticos o testing.
+*Cuando se necesitan todas las combinaciones posibles entre los registros de dos tablas.
+*Se usa en escenarios como creación de escenarios hipotéticos o testing.
     
 Ejemplo: Combinar todos los clientes con todos los productos.
 
