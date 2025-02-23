@@ -93,39 +93,32 @@ GROUP BY categoria;
 
 ## Bonus
 
--- 1. INNER JOIN
+1. INNER JOIN
     
-## ¿Cuándo usarlo?
+¿Cuándo usarlo?
 
--- *Cuando solo te interesan los registros que tienen coincidencia en ambas tablas.
--- *Ideal para análisis donde los datos incompletos no son relevantes.
+*Cuando solo interesan los registros que tienen coincidencia en ambas tablas.
+*Ideal para análisis donde los datos incompletos no son relevantes.
     
--- Ejemplo: Mostrar clientes que realmente realizaron compras.
+Ejemplo: Mostrar clientes que realmente realizaron compras.
 
-SELECT c.nombre_cliente, p.nombre_producto
-FROM clientes c
-INNER JOIN ventas v ON c.cliente_id = v.cliente_id
-INNER JOIN productos p ON v.producto_id = p.producto_id;
+Resultado: Solo se veran a los clientes que compraron algo. Los que no realizaron compras quedan afuera.
+    
 
-Resultado: Solo verás a los clientes que compraron algo. Los que no realizaron compras quedan afuera.
+2. LEFT JOIN (o LEFT OUTER JOIN)
+    
+¿Cuándo usarlo?
 
-🔙 2. LEFT JOIN (o LEFT OUTER JOIN)
-🔍 ¿Cuándo usarlo?
-
-Cuando querés todos los registros de la tabla principal (izquierda), aunque no tengan coincidencia en la tabla relacionada.
+Cuando se quieren todos los registros de la tabla principal (izquierda), aunque no tengan coincidencia en la tabla relacionada.
 Útil para detectar datos faltantes o inactividad.
-🎯 Ejemplo: Mostrar todos los clientes, aunque no hayan comprado.
+    
+Ejemplo: Mostrar todos los clientes, aunque no hayan comprado.
 
-sql
-Copiar
-Editar
-SELECT c.nombre_cliente, p.nombre_producto
-FROM clientes c
-LEFT JOIN ventas v ON c.cliente_id = v.cliente_id
-LEFT JOIN productos p ON v.producto_id = p.producto_id;
-📝 Resultado: Los clientes sin compras aparecen con NULL en la columna del producto.
+Resultado: Los clientes sin compras aparecen con NULL en la columna del producto.
+    
 
 🔜 3. RIGHT JOIN (o RIGHT OUTER JOIN)
+    
 🔍 ¿Cuándo usarlo?
 
 Cuando te interesan todos los registros de la tabla secundaria (derecha) y solo los coincidentes de la principal.
